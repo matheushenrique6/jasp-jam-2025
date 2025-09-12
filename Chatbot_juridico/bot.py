@@ -99,7 +99,7 @@ def main():
             DATA_ORDEM: [MessageHandler(filters.TEXT & ~filters.COMMAND, data_ordem)],
             VALOR_INDEMNIZACAO: [MessageHandler(filters.TEXT & ~filters.COMMAND, valor_indenizacao)],
         },
-        fallbacks=[CommandHandler('cancel', cancel)]
+        fallbacks=[CommandHandler('cancel', cancel)],
     )
 
     app.add_handler(conv_handler)
